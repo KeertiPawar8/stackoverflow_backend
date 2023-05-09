@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/", () => {
+app.get("/", async(req,res) => {
   res.send("HOME PAGE");
 });
 app.use("/", userRouter);
